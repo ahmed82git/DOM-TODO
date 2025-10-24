@@ -6,10 +6,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body onload="init()">
     <div class="container">
       <div class="inputs">
-        <h1>My To do list</h1>
+        <h1 id="title">My To do list</h1>
         <form action="">
           <input
             type="text"
@@ -18,12 +18,13 @@
             id="todoinput"
             placeholder="Title..."
           />
-          <button onclick="addl()" type="button">Add</button>
+          <button onclick="addl()" type="button" class="addbtn">Add</button>
         </form>
-        <ul id="list"></ul>
-        <div></div>
+        <div class="listcontainer" id="listcontainer">
+          <ol id="list"></ol>
+          <!-- <button class="clearbtn">Clear</button> -->
+        </div>
       </div>
-      
     </div>
   </body>
   <script src="todo.js"></script>
